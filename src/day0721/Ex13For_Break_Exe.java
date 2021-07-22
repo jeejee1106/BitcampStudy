@@ -19,25 +19,7 @@ public class Ex13For_Break_Exe {
 		 * 
 		 */
 		
-		Scanner sc = new Scanner(System.in);
-		int sum = 0;
-		int score;
-		System.out.println("점수입력");
-		for(int i = 1; i<=5; i++) {
-			score = sc.nextInt();
-			if(score<0 || score>100) {
-				System.out.println("잘못입력");
-				continue;
-			} System.out.println("");
-		}
-		
-		
-		
-		
-		
-		
-		
-		
+		//첫 번째 풀이
 //		Scanner sc = new Scanner(System.in);
 //		int sum = 0;
 //		System.out.println("점수 입력");
@@ -51,6 +33,23 @@ public class Ex13For_Break_Exe {
 //			System.out.println(i + "번 점수 : " + score);
 //			sum=+score;
 //		} System.out.println("총점 : " + sum);
+		
+		
+		//두 번째 풀이
+		Scanner sc = new Scanner(System.in);
+		int sum = 0;
+		int score;
+		System.out.println("점수입력");
+		for(int i = 1; i<=5; i++) {
+			System.out.print(i + "번 과목 : ");
+			score = sc.nextInt();
+			if(score<0 || score>100) {
+				System.out.println("잘못입력");
+				i--;
+				continue;
+			} sum+=score;
+		} System.out.println("점수의 총합 : " + sum);
+		
 		
 		//강사님 코드
 //		Scanner sc = new Scanner(System.in);
