@@ -57,6 +57,19 @@ public class Ex05MultiFor_ExeStar {
 		
 		System.out.println("<피라미드 별찍기>");
 		
+		
+		
+		//강사님 코드
+		for(int i=1;i<=5;i++) {
+			for(int j=i;j<=5;j++) { //공백은 5,4,3,2,1
+				System.out.print(" ");
+			}
+			for(int j=1;j<=i*2-1;j++) { //* 는 1,3,5,7,9
+				System.out.print("*");
+			} System.out.println();
+		}
+
+		
 		System.out.println("<숫자가 들어간 별찍기>");
 		/*
 		 *   1****

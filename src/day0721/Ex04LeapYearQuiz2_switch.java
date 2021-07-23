@@ -31,6 +31,7 @@ public class Ex04LeapYearQuiz2_switch {
 			System.out.println(year + "년는 평년입니다.");
 		}
 		
+		//if문으로!!!!!!
 //		if ((month==4)||(month==6)||(month==9)||(month==11)) {
 //			days = 30;
 //		} else if(month==2) {

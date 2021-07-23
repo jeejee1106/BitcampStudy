@@ -42,6 +42,8 @@ public class Ex10While_Exe {
 		
 		System.out.println();
 		
+		sc.nextLine();
+		
 		/*
 		 *   점수를 반복해서 입력하다가 q 나 Q 를 입력하면 
 		 *   while문을 빠져나온후 총 갯수, 총점,평균을 구해서 출력하시오
@@ -51,7 +53,10 @@ public class Ex10While_Exe {
 		while(true) {
 			System.out.println("점수입력");
 			String score = sc.nextLine();	/////////따로 돌리면 에러가 없는데 위 예제랑 같이 돌리면 에러가 나는 이유를 모르겠음!!!!!!!
-			if(score.charAt(0)=='q'||score.charAt(0)=='Q') {
+			//이제 알겠음... 27번째 줄에서 nextInt를 넣었으니 55번째 줄에서 nextLine을 넣었을 때 실행이 안된다.
+			//nextInt 다음 nextLine을 넣었을 때 에러가 나는 경우를 다시 공부하자.
+			//해결방안으로 45번째 줄에 nextLine을넣어주었더니 잘 작동한다.
+			if(score.charAt(0)=='q'||score.charAt(0)=='Q') { 
 				break;
 			} 
 			cnt++;
@@ -62,6 +67,8 @@ public class Ex10While_Exe {
 		System.out.println("점수 갯수 : " + cnt);
 		System.out.println("총점 : " + sum);
 		System.out.printf("평균 : %.1f\n", avg);
+		
+		
 		
 		//강사님 코드
 //		String score;
