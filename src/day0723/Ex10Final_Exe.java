@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ex10Final_Exe {
 
 	public static void main(String[] args) {
-		
+
 		/*
 		 * [문제1]
 		 * 숫자 inp를 입력받아 배열의 몇번째에 있는지 출력
@@ -20,31 +20,29 @@ public class Ex10Final_Exe {
 		 * 입력값 : 0
 		 * 			종료합니다.
 		 * */
-		
+
 		Scanner sc = new Scanner(System.in);
 		int[] arr = {10,11,12,13,14,15};
-		
+		int inp;
+
 		System.out.println("숫자를 입력해라");
 		while(true) {
-			int inp = sc.nextInt();
-			for(int i = 0; i<arr.length; i++) {
-				if(arr[i]==inp) {
-					System.out.println(inp + "은(는) " + (i+1) + "번째에 있어요!");
-				}
-				if(inp==0) {
-					System.out.println("종료합니다");
-					break;
-				} 
-			}		
+			inp = sc.nextInt();
+			if(arr[i]==inp) {
+				System.out.println(inp + "은(는) " + (i+1) + "번째에 있어요!");
+			} else if(inp==0) {
+				System.out.println("종료합니다");
+				break;
+			} 		
 		}
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
 
 	}
 
