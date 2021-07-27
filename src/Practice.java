@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -100,37 +101,69 @@ public class Practice {
 		//				System.out.println();
 		//			}
 		//		}
+		
+		
+//		int[] arr = {10,20,30,40,50}; 
+//		int[] arr2 = Arrays.copyOf(arr,arr.length); //arr의 길이만큼 복사
+//		int[] arr3 = Arrays.copyOf(arr,3); //arr의 길이 3개값만 복사
+//		int[] arr4 = Arrays.copyOf(arr,7); //arr의 길이 7개값 복사. 빈자리는 0으로 채움
+//		int[] arr5 = Arrays.copyOfRange(arr, 1, 4); //arr의 index[1]부터 [4]까지 복사. [4]는 포함하지 않음
+//		int[] arr6 = Arrays.copyOfRange(arr, 0, 7); //arr의 index[0]부터 [7]까지 복사. [7]은 포함하지 않음
+//		
+//		System.out.println(Arrays.toString(arr));
+//		System.out.println(Arrays.toString(arr2));
+//		System.out.println(Arrays.toString(arr3));
+//		System.out.println(Arrays.toString(arr4));
+//		System.out.println(Arrays.toString(arr5));
+//		System.out.println(Arrays.toString(arr6));
+		
+		
+		
+//		int[] arr = {35, 100, 10, 50, 75, 65};
+//		Arrays.sort(arr);
+//		System.out.println(Arrays.toString(arr));
+//		
+//		
+//		int[] Lotto = {80,61,4,5,79,50,155,031};
+//		
+//		for(int i = 0; i<Lotto.length-1; i++) {
+//			for(int j = i+1; j<Lotto.length; j++) {
+//				if(Lotto[i]>Lotto[j]) {
+//					int n = Lotto[i];
+//					Lotto[i] = Lotto[j];
+//					Lotto[j] = n;
+//				}
+//			}
+//		}	
+//		
+//		System.out.println(Arrays.toString(Lotto));
+		
+		
+		//내림차순
+		int[] arr = {35, 100, 10, 50, 75, 65};
 
-
-
-
-
-
-		//////////////////////////////////////0723 숙제//////////////////////////////////////
-		/*
-		 * [문제1]
-		 * 숫자 inp를 입력받아 배열의 몇번째에 있는지 출력
-		 * 없을경우 "없습니다" 출력
-		 * 반복해서 입력하다가 0입력시 종료
-		 * 
-		 * 예)
-		 * 입력값 : 11
-		 * 			11은 2번째에 있어요!
-		 * 입력값 : 100
-		 * 			100은 없습니다.
-		 * 입력값 : 0
-		 * 			종료합니다.
-		 * */
-
-
-
-
-
-
-
-
-
-
+		for(int n = 0; n<arr.length-1; n++) {
+			for(int m = n+1; m<arr.length; m++) {
+				if(arr[n]<arr[m]) {
+					int tmp = arr[n];
+					arr[n] = arr[m];
+					arr[m] = tmp;
+				}
+			}
+		}
+		System.out.println(Arrays.toString(arr));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 
 
