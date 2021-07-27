@@ -10,16 +10,24 @@ public class Ex11Final_Exe {
 		 * 12개의 띠를 배열에 저장 후 태어난 년도를 입력하면 해당 년도와 함께 띠를 출력하시오.
 		 */
 		Scanner sc = new Scanner(System.in);
+
+		System.out.println("년도를 입력해주세요.");
+
 		int year = sc.nextInt();
 		String[] ddi = {"원숭이", "닭", "개", "돼지", "쥐", "소", "호랑이", 
-						"토끼", "용", "뱀", "말", "양"};
-		
+				"토끼", "용", "뱀", "말", "양"};
+		//내가 짠 코드
 		for(int i = 0; i<ddi.length; i++) {
 			if(year%12==i) {
 				System.out.println(year + "년은 " + ddi[i] + "의 해 입니다.");
 			}
 		}
 
+		//강사님코드.. 대박 이렇게 간단하게도 가능하다니!!!!
+		System.out.println(year + "년생은 " + ddi[year%12] + "띠 입니다.");
+
+
+		System.out.println();
 
 
 		/*문제 2
@@ -37,7 +45,7 @@ public class Ex11Final_Exe {
 				for(int j = 0; j<i; j++) {		  //3. 중복값 제거
 					if(Lotto[i]==Lotto[j]) {
 						i--;
-						continue Loop;
+						continue Loop; //Loop를 안쓰고 continue대신 break를 넣어도 된다.
 					}
 				}
 			}								     
@@ -57,22 +65,6 @@ public class Ex11Final_Exe {
 		System.out.println(Arrays.toString(Lotto));
 
 
-
-
-		/*문제 3
-		 * int[] alpha = new int[26];
-		 * 영문 문장을 입력 후 분석하여 각 알파벳의 갯수를 구한 후 출력하시오.
-		 * */
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 
 	}
