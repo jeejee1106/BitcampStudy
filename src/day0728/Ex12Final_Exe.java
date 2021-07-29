@@ -32,6 +32,7 @@ pay+가족수당+시간수당
 
 package day0728;
 
+
 public class Ex12Final_Exe {
 
 	public static void main(String[] args) {
