@@ -90,9 +90,11 @@ public class Ex07ObjectCalender {
 				continue;
 			}
 			
+			//입력한 년월의 1일에 대한 날짜 구하고 요일숫자 구하기
 			Date date = new Date(year-1900, month-1, 1);
 			week = date.getDay();
 			
+			processendDay();
 			showCalendar();
 			System.out.println();
 			System.out.println();
