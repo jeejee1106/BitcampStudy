@@ -28,13 +28,13 @@ class Child extends Parent{
 	private String hp;
 	
 	Child() {
-//		super(); //얘가 자동 생략되어있음. 디폴트일때만 생략가능. 부모의 다른 생성자와 호출은 생략안됨.
+//		super(); //얘가 자동 생략되어있음. 디폴트 생성자 일때만 생략가능.
 		System.out.println("자식 디폴트 생성자");
 		this.hp = "010-1234-5678";
 	}
 	
 	Child(String name, int age, String hp) {
-		super(name, age); //생략안됨. 생략시 부모디폴트가 호출, 반드시 첫줄
+		super(name, age); //생략안됨. 생략시 부모의 디폴트생성자가 호출, 반드시 첫줄
 		this.hp = hp;
 	}
 	
@@ -46,7 +46,7 @@ class Child extends Parent{
 	}
 }
 
-public class Ex03Inherit {
+public class Ex03Inherit_super {
 
 	public static void main(String[] args) {
 		

@@ -28,7 +28,7 @@ class My extends Person{ //부모클래스가 다른 패키지에 있을 경우 protected는 접근
 }
 
 
-public class Ex04Inherit {
+public class Ex04Inherit_overriding {
 
 	public static void main(String[] args) {
 		
