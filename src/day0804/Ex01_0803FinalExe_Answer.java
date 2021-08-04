@@ -1,5 +1,5 @@
 package day0804;
-
+//标情捞 肚 富介阑 何赴促
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
