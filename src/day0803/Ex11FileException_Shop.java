@@ -6,10 +6,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
-public class Ex11Exception_Shop {
+public class Ex11FileException_Shop {
 
 	public static void payRead() {
-		String fileName = "C:\\Users\\PC\\Desktop\\study\\shop.txt";
+//		String fileName = "C:\\Users\\PC\\Desktop\\study\\shop.txt"; //개인노트북경로
+		String fileName = "D:\\bitjava0719\\javawork\\shop.txt"; //학원PC경로
 		FileReader fr = null;
 		BufferedReader br = null;
 

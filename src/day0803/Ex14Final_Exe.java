@@ -28,7 +28,8 @@ public class Ex14Final_Exe {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm EEEE");
 		System.out.println(sdf.format(date));
 
-		String fileName = "C:\\Users\\PC\\Desktop\\study\\sawon.txt";
+//		String fileName = "C:\\Users\\PC\\Desktop\\study\\sawon.txt"; //개인노트북경로
+		String fileName = "D:\\bitjava0719\\javawork\\sawon.txt"; //학원PC경로
 		FileReader fr = null;
 		BufferedReader br = null;
 		System.out.println("**사원 급여 현황**");
@@ -49,6 +50,7 @@ public class Ex14Final_Exe {
 				int gibon = Integer.parseInt(data[1]);
 				int family = Integer.parseInt(data[2]);
 				int over = Integer.parseInt(data[3]);
+				
 				int fsudang = family*30000;
 				int tsudang = over*12000;
 				int total = gibon+fsudang+tsudang;

@@ -10,8 +10,11 @@ public class Ex07FileException_memo1_finally {
 	public static void read() {
 		
 //		String fileName = "C:/Users/PC/Desktop/study/memo1.txt";//파일의 경로를 표시할 때! 슬래시(/)는 한 번, 역슬래시(\\)는 두 번 써줘야한다!
-		String fileName = "C:\\Users\\PC\\Desktop\\study\\memo1.txt";//파일의 경로를 표시할 때! 슬래시(/)는 한 번, 역슬래시(\\)는 두 번 써줘야한다!
-//		String fileName = "C:\\Users\\PC\\Desktop\\study\\memo1111.txt"; //일부로 없는파일을 생성해봄. 주석처리 지우고 실행하면 오류메세지가 어떻게 뜨는지 보인다.
+
+//		String fileName = "C:\\Users\\PC\\Desktop\\study\\memo1.txt"; //개인노트북 경로
+		String fileName = "D:\\bitjava0719\\javawork\\memo1.txt"; //학원PC에서 할 때 경로
+
+		//		String fileName = "C:\\Users\\PC\\Desktop\\study\\memo1111.txt"; //일부로 없는파일을 생성해봄. 주석처리 지우고 실행하면 오류메세지가 어떻게 뜨는지 보인다.
 		BufferedReader br = null;
 		FileReader fr = null;
 		

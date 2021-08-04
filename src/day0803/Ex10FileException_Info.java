@@ -16,7 +16,8 @@ public class Ex10FileException_Info {
 
 
 	public static void fileRead() {
-		String filename = "C:\\Users\\PC\\Desktop\\study\\info.txt";
+//		String filename = "C:\\Users\\PC\\Desktop\\study\\info.txt"; //개인노트북경로
+		String filename = "D:\\bitjava0719\\javawork\\info.txt"; //학원PC경로
 		FileReader fr = null;
 		BufferedReader br = null;
 

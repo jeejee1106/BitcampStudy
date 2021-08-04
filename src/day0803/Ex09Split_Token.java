@@ -2,7 +2,6 @@ package day0803;
 
 import java.util.StringTokenizer;
 
-import sun.util.locale.StringTokenIterator;
 
 public class Ex09Split_Token {
 

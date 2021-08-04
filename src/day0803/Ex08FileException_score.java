@@ -10,7 +10,8 @@ public class Ex08FileException_score {
 	 * score.txt 를 읽고 점수가 총 몇개인지 구하고 점수에 대한 총점과 평균 구해서 출력
 	 * */
 	public static void scoreRead() throws IOException, FileNotFoundException {
-		String fileName = "C:\\Users\\PC\\Desktop\\study\\score.txt";
+//		String fileName = "C:\\Users\\PC\\Desktop\\study\\score.txt"; //개인노트북 경로
+		String fileName = "D:\\bitjava0719\\javawork\\score.txt"; //학원PC경로
 		FileReader fr = null; //파일이 제대로 된 경로에 있는지, 잘 열리는지 확인하는(?)코드
 		BufferedReader br = null; //실제로 파일의 내용을 읽는 코드?
 		int cnt = 0; //점수의 갯수
