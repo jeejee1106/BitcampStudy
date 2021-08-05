@@ -6,19 +6,19 @@ public class Ex02StringClassAPI {
 		//String 객체에 대한 멤버 메서드 공부하기
 		
 		//.length()        :  문자열의 길이(공백포함)
-		//.trim()          :  문자열의 공백 제거
+		//.trim()          :  문자열의 앞뒤공백 제거
 		//.charAt(n)       :  문자열 n번째 위치의 문자(위치는 0부터 셈)
 		//.indexOf(C)      :  문자열 중 문자'C'의 위치
 		//.substring(n,m)  :  문자열 n번째 위치부터 m까지 추출
 		//.substring(n)    :  문자열 n번째 위치부터 끝까지 추출
-		//a.equlse(b)        :  문자열과 문자열이 같은지 비교. 대소문자까지 같아야 true
-		//a.equlseIgnoreCass(b) : 문자열과 문자열이 같은지 비교. 대소문자 상관없음.스펠링만 같으면 true
+		//a.equls(b)        :  문자열과 문자열이 같은지 비교. 대소문자까지 같아야 true
+		//a.equlsIgnoreCase(b) : 문자열과 문자열이 같은지 비교. 대소문자 상관없음.스펠링만 같으면 true
 		//a.compareTo(b) : a와 b가 같을 경우0, a가 작을경우 -값, a가 클경우 +값. 첫 글자의 아스키코드 기준임. 
-		//.startsWith()
-		//.endsWith()
-		//.split()
-		//.toLowerCase()
-		//.toUpperCase()
+		//.startsWith()  : 문자열의 시작이 n이 맞는가. 맞으면  true
+		//.endsWith()    : 문자열이 n으로 끝나는가. 맞으면 true
+		//.split()       : 문자열 분리
+		//.toLowerCase() : 모든 문자열 소문자로
+		//.toUpperCase() : 모든 문자열 대문자로
 		
 		String str1 = "apple";
 		String str2 = "Apple";
