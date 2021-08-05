@@ -77,7 +77,7 @@ public class Ex06Final_Exe {
 	public void stuRead() {
 
 		NumberFormat nf = NumberFormat.getInstance();
-		nf.setMaximumFractionDigits(2);
+		nf.setMaximumFractionDigits(2); //소수점 2자리로 지정
 		int num=0;
 		double avg = 0;
 		double javg=0;
@@ -113,8 +113,8 @@ public class Ex06Final_Exe {
 			} 
 			javg = (double)jsum/num;
 			oavg = (double)osum/num;
-			System.out.println("자바평균 : " + javg);
-			System.out.println("오라클 평균 : " + oavg);
+			System.out.println("자바평균 : " + nf.format(javg));
+			System.out.println("오라클 평균 : " + nf.format(oavg));
 		} catch (FileNotFoundException e) {
 			System.out.println("파일이 없습니다. 파일을 추가해주세요." + e.getMessage());
 		} catch (IOException e) {
@@ -138,6 +138,9 @@ public class Ex06Final_Exe {
 		File file = new File(FILENAME);
 		if(file.exists()) {
 			file.delete();
+			System.out.println("삭제되었습니다.");
+		} else {
+			System.out.println("해당 파일이 존재하지 않습니다.");
 		}
 
 	}
