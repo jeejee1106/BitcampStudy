@@ -13,7 +13,8 @@ import java.util.StringTokenizer;
 public class Ex01_0803FinalExe_Answer {
 	
 	public static void fileRead() {
-		String fileName = "D:\\bitjava0719\\javawork\\sawon.txt";
+		String fileName = "C:\\Users\\PC\\Desktop\\study\\sawon.txt";
+//		String fileName = "D:\\bitjava0719\\javawork\\sawon.txt";
 		FileReader fr = null;
 		BufferedReader br = null;
 		Date date = new Date();

@@ -9,7 +9,8 @@ import java.util.Scanner;
 
 public class Ex04FileReadWrite {
 	
-	static final String FILENAME = "D:\\bitjava0719\\javawork\\sungjuk.txt";
+	static final String FILENAME = "C:\\Users\\PC\\Desktop\\study\\sungjuk.txt";
+//	static final String FILENAME = "D:\\bitjava0719\\javawork\\sungjuk.txt";
 	FileReader fr;
 	BufferedReader br;
 	FileWriter fw;

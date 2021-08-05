@@ -12,7 +12,8 @@ import java.util.Scanner;
 public class Ex05FileReadWrite {
 
 	Scanner sc =new Scanner(System.in);
-	static final String FILENAME = "D:\\bitjava0719\\javawork\\super.txt";
+	static final String FILENAME = "C:\\Users\\PC\\Desktop\\study\\super.txt";
+//	static final String FILENAME = "D:\\bitjava0719\\javawork\\super.txt";
 	FileReader fr;
 	FileWriter fw;
 	BufferedReader br;

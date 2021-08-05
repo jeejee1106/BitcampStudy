@@ -6,16 +6,18 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Ex06Final_Exe {
-	
-	static final String FILENAME = "D:\\bitjava0719\\javawork\\student.txt";
+
+	static final String FILENAME = "C:\\Users\\PC\\Desktop\\study\\student11.txt"; //개인노트북
+//	static final String FILENAME = "D:\\bitjava0719\\javawork\\student.txt"; //학원pc
 	Scanner sc = new Scanner(System.in);
 	FileWriter fw;
 	FileReader fr;
 	BufferedReader br;
-	
+
 	public int getMenu() throws NumberFormatException {
 		System.out.println("**학생정보 메뉴~~**");
 		System.out.println("1. 학생정보 추가");
@@ -25,62 +27,71 @@ public class Ex06Final_Exe {
 		int num = Integer.parseInt(sc.nextLine());
 		return num;
 	}
-	
+
 	public void stuWrite() {
 		try {
 			fw = new FileWriter(FILENAME, true);
 			String name;
 			int java = 0;
 			int oracle = 0;
-			
+
 			System.out.println("학생 이름을 입력해주세요");
 			name = sc.nextLine();
-			
-			try {
-			System.out.println("JAVA 점수를 입력해주세요.");
-			java = Integer.parseInt(sc.nextLine());
-			} catch(NumberFormatException e) {
-				System.out.println("숫자를 입력해주세요.");
+
+			while(true) {
+				try {
+					System.out.println("JAVA 점수를 입력해주세요.");
+					java = Integer.parseInt(sc.nextLine());
+				} catch(NumberFormatException e) {
+					System.out.println("숫자를 입력해주세요.");
+					continue;
+				} break;
 			}
-			
-			try {
-			System.out.println("Oracle 점수를 입력해주세요.");
-			oracle = Integer.parseInt(sc.nextLine());
-			} catch(NumberFormatException e) {
-				System.out.println("숫자를 입력해주세요.");
+
+			while(true) {
+				try {
+					System.out.println("Oracle 점수를 입력해주세요.");
+					oracle = Integer.parseInt(sc.nextLine());
+				} catch(NumberFormatException e) {
+					System.out.println("숫자를 입력해주세요.");
+					continue;
+				} break;
 			}
-			
 			fw.write(name + "," + java + "," + oracle + "\n");
-			
+
 			System.out.println("학생 정보가 입력되었습니다.");
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
 			try {
-				fw.close();
+				if(fw!=null) {
+					fw.close();
+				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
 	}
-	
+
 	public void stuRead() {
-		
+
+		NumberFormat nf = NumberFormat.getInstance();
+		nf.setMaximumFractionDigits(2);
 		int num=0;
 		double avg = 0;
 		double javg=0;
 		double oavg = 0;
 		int jsum=0;
 		int osum=0;
-		
+
 		try {
 			fr = new FileReader(FILENAME);
 			br = new BufferedReader(fr);
-			
+
 			System.out.println("**전체학생 정보**");
 			System.out.println("번호\t학생명\tJAVA\tOracle\t총점\t평균");
-			
+
 			while(true) {
 				String s = br.readLine();
 				if(s==null) {
@@ -92,11 +103,11 @@ public class Ex06Final_Exe {
 				int oracle = Integer.parseInt(d[2]);
 				int sum = java+oracle;
 				avg = sum/2.0;
-				
+
 				jsum +=java;
 				osum += oracle;
-				
-				
+
+
 				System.out.println(++num + "\t" + name + "\t" + java + "\t"
 						+ oracle + "\t" + sum + "\t" + avg);
 			} 
@@ -121,16 +132,16 @@ public class Ex06Final_Exe {
 			}
 		}
 	}
-	
+
 	public void stuDelete() {
-		
+
 		File file = new File(FILENAME);
 		if(file.exists()) {
 			file.delete();
 		}
-		
+
 	}
-	
+
 	public void process() {
 		while(true) {
 			int num=0;
@@ -163,11 +174,11 @@ public class Ex06Final_Exe {
 	}
 
 	public static void main(String[] args) {
-		
+
 		Ex06Final_Exe ex = new Ex06Final_Exe();
 		ex.process();
-		
-		
+
+
 
 	}
 

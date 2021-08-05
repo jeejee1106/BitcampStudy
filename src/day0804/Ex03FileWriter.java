@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class Ex03FileWriter {
 	Scanner sc;
 	FileWriter fw;
-	static final String FILENAME = "D:\\bitjava0719\\javawork\\member.txt";
+	static final String FILENAME = "C:\\Users\\PC\\Desktop\\study\\member.txt";
+//	static final String FILENAME = "D:\\bitjava0719\\javawork\\member.txt";
 	
 	public Ex03FileWriter() {
 		sc = new Scanner(System.in);
