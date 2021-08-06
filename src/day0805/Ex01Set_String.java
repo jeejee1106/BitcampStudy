@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 
-public class Ex01Set {
+public class Ex01Set_String {
 
 	//Set 타입은 중복데이타 허용안함, 비순차적으로 들어간다
 	public static void main(String[] args) {
@@ -29,11 +29,15 @@ public class Ex01Set {
 		for(String s:set1)
 			System.out.println(s);
 		System.out.println();
+		
+		
 		System.out.println("출력 #2");
 		Iterator<String> iter=set1.iterator();
 		while(iter.hasNext())
 			System.out.println(iter.next());
 		System.out.println();
+		
+		
 		System.out.println("출력 #3");
 		Object []ob=set1.toArray();
 		for(int i=0;i<ob.length;i++)
