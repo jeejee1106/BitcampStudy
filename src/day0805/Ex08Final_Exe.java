@@ -42,7 +42,7 @@ public class Ex08Final_Exe {
 		}
 
 		//방법2
-		//		find = list.remove(name);
+		//find = list.remove(name);
 
 		if(find) {
 			System.out.println(name + "회원님을 삭제했습니다.");
