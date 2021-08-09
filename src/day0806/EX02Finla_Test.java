@@ -10,19 +10,21 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EX02Finla_Test {
-	static final String FILENAME = "D:\\bitjava0719\\javawork\\Test0806.txt";
-	List<Test0806> list = new ArrayList<Test0806>();
+//	static final String FILENAME = "D:\\bitjava0719\\javawork\\Test0806.txt";
+	static final String FILENAME = "C:\\Users\\PC\\Desktop\\study\\Member0806.txt";
+	List<Member0806> list = new ArrayList<Member0806>();
 	Scanner sc = new Scanner(System.in);
 
 	public EX02Finla_Test() {
 		memberFileRead();
+		
 	}
 
 	public void memberFileWrite() {
 		FileWriter fw = null;
 		try {
 			fw = new FileWriter(FILENAME);
-			for(Test0806 member : list) {
+			for(Member0806 member : list) {
 				String s = member.getName() + "," + member.getHp() + "," + member.getGender() + "\n";
 				fw.write(s);
 			}
@@ -48,17 +50,17 @@ public class EX02Finla_Test {
 			br = new BufferedReader(fr);
 
 			while(true) {
-				String m = br.readLine();
-				if(m==null) {
+				String s = br.readLine();
+				if(s==null) {
 					break;
 				}
 
-				String[] d = m.split(",");
+				String[] d = s.split(",");
 				String name = d[0];
 				String hp = d[1];
 				String gender = d[2];
 
-				Test0806 t = new Test0806(name, hp, gender);
+				Member0806 t = new Member0806(name, hp, gender);
 				list.add(t);
 
 			}
@@ -75,7 +77,6 @@ public class EX02Finla_Test {
 				if(br!=null) br.close();
 				if(fr!=null) fr.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
@@ -85,7 +86,7 @@ public class EX02Finla_Test {
 	public void memberAdd() {
 		System.out.println("추가할 회원명을 입력해주세요");
 		String name = sc.nextLine();
-		for(Test0806 ts : list) {
+		for(Member0806 ts : list) {
 			if(ts.getName().equals(name)) {
 				System.out.println("같은 이름이 있습니다. 다른 이름으로 가입해주세요.");
 				return;
@@ -106,7 +107,7 @@ public class EX02Finla_Test {
 			}
 		}
 		
-		Test0806 ts = new Test0806(name, hp, gender);
+		Member0806 ts = new Member0806(name, hp, gender);
 		list.add(ts);
 		System.out.println("회원정보가 추가되었습니다.");
 
@@ -121,7 +122,7 @@ public class EX02Finla_Test {
 		System.out.println("전체 회원 목록입니다!");
 		System.out.println("번호\t이름\t핸드폰번호\t성별");
 
-		for(Test0806 t :list) {
+		for(Member0806 t :list) {
 			System.out.println(++num + "\t" + t.getName() + "\t" + t.getHp() + "\t" + t.getGender());
 		}
 
@@ -130,7 +131,17 @@ public class EX02Finla_Test {
 	}
 
 	public void memberUpdata() {
-		
+//		System.out.println("회원명을 입력해주세요.");
+//		String name = sc.nextLine();
+//		for(Member0806 m : list) {
+//			if(!m.getName().equals(name)||) {
+//				System.out.println("일치하는 회원이 없습니다. 다시 입력해주세요");
+//				continue;
+//			}
+//			if(m.getName().equals(name)) {
+//				
+//			}
+//		}
 		
 
 
@@ -144,7 +155,7 @@ public class EX02Finla_Test {
 		boolean find = false;
 
 		for(int i = 0; i<list.size(); i++) {
-			Test0806 t = list.get(i);
+			Member0806 t = list.get(i);
 			if(t.getName().equals(name)) {
 				find = true;
 				list.remove(i);
@@ -165,7 +176,7 @@ public class EX02Finla_Test {
 		String fn = sc.nextLine();
 		boolean find = false;
 		int num = 0;
-		Test0806 ts = null;
+		Member0806 ts = null;
 		for(int i = 0; i<list.size(); i++) {
 			ts = list.get(i);
 			if(ts.getName().startsWith(fn)) {
@@ -184,7 +195,7 @@ public class EX02Finla_Test {
 		String fn = sc.nextLine();
 		boolean find = false;
 		int num = 0;
-		Test0806 ts = null;
+		Member0806 ts = null;
 		for(int i = 0; i<list.size(); i++) {
 			ts = list.get(i);
 			if(ts.getGender().startsWith(fn)) {

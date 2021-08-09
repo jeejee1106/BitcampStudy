@@ -1,16 +1,16 @@
 package day0806;
 
-public class Test0806 {
+public class Member0806 {
 	
 	private String name;
 	private String hp;
 	private String gender;
 	
-	public Test0806() {
+	public Member0806() {
 		
 	}
 
-	public Test0806(String name, String hp, String gender) {
+	public Member0806(String name, String hp, String gender) {
 		super();
 		this.name = name;
 		this.hp = hp;
