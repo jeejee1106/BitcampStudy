@@ -8,8 +8,8 @@ public class Ex02FileWriter {
 	
 	public static void fileWriter() {
 		FileWriter fw = null;
-		String fileName = "C:\\Users\\PC\\Desktop\\study\\test1.txt";
-//		String fileName = "D:\\bitjava0719\\javawork\\test1.txt";
+//		String fileName = "C:\\Users\\PC\\Desktop\\study\\test1.txt";
+		String fileName = "D:\\bitjava0719\\javawork\\test1.txt";
 		try {
 			fw = new FileWriter(fileName); //처음 만들었던 파일에 계속 덮어쓰기를 하는 파일타입!!!!!
 			//파일에 내용 추가하기
