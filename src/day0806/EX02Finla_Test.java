@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EX02Finla_Test {
-	static final String FILENAME = "D:\\bitjava0719\\javawork\\Test0806.txt";
-//	static final String FILENAME = "C:\\Users\\PC\\Desktop\\study\\Member0806.txt";
+//	static final String FILENAME = "D:\\bitjava0719\\javawork\\Test0806.txt";
+	static final String FILENAME = "C:\\Users\\PC\\Desktop\\study\\Member0806.txt";
 	List<Member0806> list = new ArrayList<Member0806>();
 	Scanner sc = new Scanner(System.in);
 
