@@ -28,7 +28,7 @@ public class Ex03Exception_throws2 {
 	
 	public static void main(String[] args) {
 		
-//		process();
+		process();
 		
 		try {
 			process2();
